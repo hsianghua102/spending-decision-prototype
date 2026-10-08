@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f1e9">
+  <meta name="description" content="先看看一筆消費，會如何改變接下來的生活。">
+  <title>日常｜消費決策助手</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header" id="appHeader">
+      <button class="brand" type="button" data-go="home" aria-label="回到首頁">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>日常</span>
+      </button>
+      <div class="header-actions">
+        <span class="secure-label"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 10 0v3M5 10h14v10H5z"/></svg>本機安全試算</span>
+        <button class="icon-button" type="button" aria-label="通知"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><span class="notification-dot"></span></button>
+        <button class="avatar" type="button" aria-label="個人帳戶">予</button>
+      </div>
+    </header>
+
+    <main id="app" aria-live="polite">
+      <section class="screen screen-home is-active" data-screen="home" aria-labelledby="homeTitle">
+        <div class="home-grid">
+          <div class="home-main">
+            <div class="eyebrow-row"><span class="eyebrow">10 月概況</span><button class="text-button" type="button">收支明細 <span aria-hidden="true">→</span></button></div>
+            <div class="spend-summary">
+              <p>本月已花</p><h1 id="homeTitle"><small>NT$</small>18,420</h1>
+              <p class="trend"><span aria-hidden="true">↗</span> 比過去三個月同期高 18%</p>
+            </div>
+            <div class="spending-chart" aria-label="10 月每日累積支出趨勢，10 月 1 日至 8 日由 2,140 元增加至 18,420 元">
+              <div class="chart-topline"><span>每日累積支出</span><span class="mono">NT$20k</span></div>
+              <svg viewBox="0 0 640 170" role="img" aria-hidden="true" preserveAspectRatio="none">
+                <defs><linearGradient id="homeFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#187a63" stop-opacity=".18"/><stop offset="1" stop-color="#187a63" stop-opacity="0"/></linearGradient></defs>
+                <path class="grid-line" d="M0 20H640M0 85H640M0 150H640"/><path class="area" d="M0 145 C70 139 95 121 150 122 S235 99 295 103 S390 75 450 74 S540 44 640 30 V170H0Z"/><path class="line" d="M0 145 C70 139 95 121 150 122 S235 99 295 103 S390 75 450 74 S540 44 640 30"/><circle cx="640" cy="30" r="5"/><circle cx="640" cy="30" r="10" class="pulse-dot"/>
+              </svg>
+              <div class="axis"><span>10/1</span><span>10/4</span><span>今天 10/8</span></div>
+            </div>
+            <section class="decision-callout" aria-labelledby="decisionTitle">
+              <div class="callout-icon" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M16 5v22M5 16h22"/><circle cx="16" cy="16" r="13"/></svg></div>
+              <div><span class="kicker">消費決策助手</span><h2 id="decisionTitle">最近有一筆大額消費正在考慮嗎？</h2><p>先看看買下去，未來三個月的生活會怎麼變。</p></div>
+              <button class="button button-dark" type="button" data-go="create">試算一筆消費 <span aria-hidden="true">→</span></button>
+            </section>
+          </div>
+          <aside class="home-aside" aria-label="財務摘要">
+            <div class="aside-heading"><span>財務摘要</span><span>即時</span></div>
+            <div class="metric-row"><span>本月預算剩餘</span><strong><small>NT$</small> 14,580</strong></div><div class="budget-track"><i style="width:56%"></i></div><p class="helper">以目前速度，月底預估剩餘 NT$3,240</p>
+            <div class="rule"></div>
+            <div class="goal-line"><div><span class="goal-symbol" aria-hidden="true">⌁</span><span>年底儲蓄目標</span></div><strong>68%</strong></div><div class="budget-track warm"><i style="width:68%"></i></div><div class="goal-values"><span>已存 NT$102,000</span><span>目標 NT$150,000</span></div>
+            <div class="rule"></div>
+            <div class="recent-heading"><span>最近支出</span><button type="button">查看全部</button></div>
+            <ul class="transactions">
+              <li><span class="transaction-icon">食</span><span><strong>午餐・小器食堂</strong><small>今天 12:42</small></span><b>−240</b></li>
+              <li><span class="transaction-icon transport">行</span><span><strong>悠遊卡自動加值</strong><small>昨天 08:16</small></span><b>−500</b></li>
+              <li><span class="transaction-icon life">家</span><span><strong>全聯福利中心</strong><small>10 月 6 日</small></span><b>−1,284</b></li>
+            </ul>
+          </aside>
+        </div>
+        <nav class="bottom-nav" aria-label="主要導覽">
+          <button class="active" type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10h-6v-7H9v7H3z"/></svg><span>首頁</span></button><button type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M7 12h10"/></svg><span>記一筆</span></button><button type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20V7"/></svg><span>分析</span></button><button type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 21v-2a7 7 0 0 1 14 0v2M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg><span>我的</span></button>
+        </nav>
+      </section>
+
+      <section class="screen flow-screen" data-screen="create" aria-labelledby="createTitle">
+        <div class="flow-wrap narrow">
+          <button class="back-button" type="button" data-go="home"><span aria-hidden="true">←</span> 回首頁</button><div class="step-label"><span>消費試算</span><span class="mono">01 / 03</span></div>
+          <header class="flow-title"><p class="eyebrow">建立一筆決策</p><h1 id="createTitle" tabindex="-1">最近想買什麼？</h1><p>填下正在考慮的消費，30 秒看看它對未來的影響。</p></header>
+          <form id="decisionForm" novalidate>
+            <div class="form-field"><label for="itemName">商品或用途</label><div class="input-wrap"><input id="itemName" name="item" value="iPhone 17 Pro" autocomplete="off" maxlength="32" aria-describedby="itemHint"><span class="input-count" id="nameCount">13 / 32</span></div><p class="field-message" id="itemHint">例如：新手機、東京機票、進修課程</p></div>
+            <div class="form-field"><label for="itemAmount">預計花費</label><div class="money-input"><span>NT$</span><input id="itemAmount" name="amount" inputmode="numeric" value="36,900" aria-describedby="amountHint"></div><p class="field-message" id="amountHint">請輸入 1,000 至 1,000,000 元</p></div>
+            <fieldset class="form-field intention-field"><legend>這筆消費對你來說是</legend><div class="segmented-control"><label><input type="radio" name="intention" value="想要" checked><span><b>想要</b><small>讓生活更開心</small></span></label><label><input type="radio" name="intention" value="需要"><span><b>需要</b><small>生活中的必要</small></span></label></div><p class="field-message">沒有標準答案，只是幫助你記得當下的想法。</p></fieldset>
+            <button class="button button-primary button-full" type="submit" id="analyzeButton">看看買了會怎樣 <span aria-hidden="true">→</span></button><p class="privacy-note"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 10 0v3M5 10h14v10H5z"/></svg>這次試算不會新增成一筆實際支出</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="screen flow-screen analysis-screen" data-screen="analysis" aria-labelledby="analysisTitle">
+        <div class="flow-wrap compact">
+          <div class="analysis-visual" aria-hidden="true"><span class="radar radar-1"></span><span class="radar radar-2"></span><span class="radar radar-3"></span><div class="analysis-core"><span></span><span></span><span></span></div></div>
+          <header class="flow-title centered"><p class="eyebrow">正在建立你的財務時間線</p><h1 id="analysisTitle" tabindex="-1">先把已知的拼起來</h1><p id="analysisSub">正在分析你的消費習慣⋯</p></header>
+          <ol class="analysis-list"><li data-analysis-step="0"><span class="step-status"><i></i></span><span><b>分析你的消費習慣</b><small>近三個月平均支出 NT$32,400</small></span></li><li data-analysis-step="1"><span class="step-status"><i></i></span><span><b>找出固定支出</b><small>每月固定支出 NT$18,200</small></span></li><li data-analysis-step="2"><span class="step-status"><i></i></span><span><b>讀取儲蓄目標</b><small>年底存到 NT$150,000</small></span></li><li data-analysis-step="3"><span class="step-status"><i></i></span><span><b>建立未來現金流</b><small>需要知道收入何時進來</small></span></li></ol>
+          <button class="button button-primary button-full analysis-next" id="analysisNext" type="button" data-go="permission" disabled>看看還缺什麼 <span aria-hidden="true">→</span></button>
+        </div>
+      </section>
+
+      <section class="screen flow-screen" data-screen="permission" aria-labelledby="permissionTitle">
+        <div class="permission-layout">
+          <div class="permission-story">
+            <button class="back-button" type="button" data-go="create"><span aria-hidden="true">←</span> 返回修改</button><div class="step-label"><span>消費試算</span><span class="mono">02 / 03</span></div>
+            <header class="flow-title"><p class="eyebrow">還差最後一塊資料</p><h1 id="permissionTitle" tabindex="-1">讓時間軸完整，<br>才能看見消費之後。</h1><p>我們已經知道你的消費習慣。要計算這筆 <strong class="js-amount">NT$36,900</strong> 花下去後，未來三個月會發生什麼，還需要知道薪資何時進來。</p></header>
+            <div class="puzzle-grid" aria-label="四項試算資料中，消費習慣、固定支出、儲蓄目標已取得，薪資入帳尚未取得"><div class="puzzle-piece done"><span>01</span><b>消費習慣</b><i>已取得 ✓</i></div><div class="puzzle-piece done"><span>02</span><b>固定支出</b><i>已取得 ✓</i></div><div class="puzzle-piece done"><span>03</span><b>儲蓄目標</b><i>已取得 ✓</i></div><div class="puzzle-piece locked"><span>04</span><b>薪資入帳</b><i>尚未連結</i></div></div>
+          </div>
+          <aside class="permission-panel"><span class="panel-kicker">連結前，你應該知道</span><h2>只讀取這次試算需要的資料</h2><ul class="scope-list"><li class="allowed"><span>✓</span><div><b>用於模擬未來現金流</b><small>讀取薪資入帳金額與週期</small></div></li><li class="denied"><span>×</span><div><b>無法進行任何轉帳</b><small>不會取得網銀密碼與完整交易內容</small></div></li><li class="allowed"><span>✓</span><div><b>由你掌握連結</b><small>可以隨時在設定中解除</small></div></li></ul><button class="button button-primary button-full" type="button" data-go="bank">連結薪資，查看模擬結果 <span aria-hidden="true">→</span></button><button class="button button-quiet button-full" type="button" id="skipPermission">暫時不要</button><p class="panel-footnote"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 10 0v3M5 10h14v10H5z"/></svg>採用唯讀模式，連線資訊經加密處理</p></aside>
+        </div>
+      </section>
+
+      <section class="screen flow-screen bank-screen" data-screen="bank" aria-labelledby="bankTitle">
+        <div class="flow-wrap bank-wrap">
+          <button class="back-button" type="button" data-go="permission"><span aria-hidden="true">←</span> 查看資料範圍</button><div class="step-label"><span>連結薪資資料</span><span class="mono">安全連線</span></div>
+          <div id="bankSelectState"><header class="flow-title"><p class="eyebrow">選擇薪轉銀行</p><h1 id="bankTitle" tabindex="-1">你的薪資匯入哪間銀行？</h1><p>這是模擬授權流程，不會連上真實帳戶。</p></header><div class="bank-search"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input id="bankSearch" type="search" placeholder="搜尋銀行" aria-label="搜尋銀行"></div><div class="bank-options" role="radiogroup" aria-label="選擇薪轉銀行"><button class="bank-option" type="button" role="radio" aria-checked="false" data-bank="國泰世華"><span class="bank-logo cathay">C</span><span><b>國泰世華</b><small>銀行代碼 013</small></span><i>○</i></button><button class="bank-option" type="button" role="radio" aria-checked="false" data-bank="台新銀行"><span class="bank-logo taishin">T</span><span><b>台新銀行</b><small>銀行代碼 812</small></span><i>○</i></button><button class="bank-option" type="button" role="radio" aria-checked="false" data-bank="中國信託"><span class="bank-logo ctbc">中</span><span><b>中國信託</b><small>銀行代碼 822</small></span><i>○</i></button><button class="bank-option" type="button" role="radio" aria-checked="false" data-bank="玉山銀行"><span class="bank-logo esun">山</span><span><b>玉山銀行</b><small>銀行代碼 808</small></span><i>○</i></button></div><div class="bank-empty" id="bankEmpty" hidden><span>⌕</span><b>找不到這間銀行</b><p>試試銀行全名，或清除搜尋條件。</p></div><p class="bank-error" id="bankError" role="alert"></p><button class="button button-primary button-full" type="button" id="connectBank" disabled>繼續連結 <span aria-hidden="true">→</span></button></div>
+          <div class="connecting-state" id="connectingState" hidden><span class="connection-loader"></span><p class="eyebrow">正在建立唯讀連線</p><h2>確認薪資入帳資訊⋯</h2><small>請保持此頁開啟</small></div>
+          <div class="bank-success" id="bankSuccessState" hidden><div class="success-mark"><svg aria-hidden="true" viewBox="0 0 64 64"><circle cx="32" cy="32" r="29"/><path d="m19 33 9 9 18-21"/></svg></div><p class="eyebrow">連結完成</p><h1 tabindex="-1">薪資資料已連結</h1><p>你的未來三個月現金流，現在可以完整試算了。</p><dl class="salary-summary"><div><dt>每月薪資</dt><dd>約 NT$52,000</dd></div><div><dt>通常入帳</dt><dd>每月 5 日</dd></div><div><dt>資料範圍</dt><dd>薪資金額與週期</dd></div></dl><button class="button button-primary button-full" type="button" data-go="results">查看我的模擬結果 <span aria-hidden="true">→</span></button></div>
+        </div>
+      </section>
+
+      <section class="screen results-screen" data-screen="results" aria-labelledby="resultsTitle">
+        <div class="results-topbar"><button class="back-button" type="button" data-go="home"><span aria-hidden="true">←</span> 結束試算</button><div class="step-label"><span>消費試算</span><span class="mono">03 / 03</span></div></div>
+        <header class="results-heading"><div><p class="eyebrow">你的三種未來</p><h1 id="resultsTitle" tabindex="-1">如果買下這支 <span class="js-amount">NT$36,900</span> 的手機，<br>會發生什麼？</h1></div><p>試算依據：近三個月消費、固定支出、儲蓄目標與薪資週期。<button type="button" id="showBasis">查看依據</button></p></header>
+        <div class="scenario-tabs" role="tablist" aria-label="付款情境"><button type="button" role="tab" aria-selected="true" data-scenario="now"><span>A</span><b>現在付清</b><small class="js-amount">NT$36,900</small></button><button type="button" role="tab" aria-selected="false" data-scenario="installments"><span>B</span><b>分 3 期</b><small>每月 <i class="js-installment">NT$12,300</i></small></button><button type="button" role="tab" aria-selected="false" data-scenario="delay"><span>C</span><b>12 月再買</b><small>先多存 2 個月</small></button></div>
+        <div class="results-grid">
+          <section class="chart-panel" aria-labelledby="cashflowTitle"><div class="panel-heading"><div><p class="eyebrow">未來現金流</p><h2 id="cashflowTitle">每月安全餘額</h2></div><div class="chart-legend"><span><i></i>試算後</span><span><i></i>安全線</span></div></div><div class="cashflow-chart" id="cashflowChart"><div class="chart-y"><span>20k</span><span>10k</span><span>0</span><span>−10k</span></div><svg viewBox="0 0 640 250" role="img" aria-labelledby="chartTitle chartDesc" preserveAspectRatio="none"><title id="chartTitle">未來四個月安全餘額</title><desc id="chartDesc">現在付清情境：10 月 12,400 元、11 月負 6,800 元、12 月 3,600 元、1 月 8,900 元。</desc><path class="chart-grid" d="M20 25H620M20 87H620M20 150H620M20 213H620"/><path class="safe-line" d="M20 150H620"/><path class="scenario-area" id="scenarioArea" d="M20 70 L220 193 L420 127 L620 94 L620 150 L20 150Z"/><path class="scenario-line" id="scenarioLine" d="M20 70 L220 193 L420 127 L620 94"/><g id="scenarioPoints"></g></svg><div class="chart-months"><span>現在</span><span>11 月</span><span>12 月</span><span>1 月</span></div></div><div class="chart-summary" id="chartSummary"><span class="risk-dot">!</span><p><b>11 月可能出現資金缺口</b><small>依照過去消費習慣，安全餘額最低約 −NT$6,800。</small></p></div></section>
+          <section class="impact-panel" aria-labelledby="impactTitle"><div class="panel-heading"><div><p class="eyebrow">關鍵影響</p><h2 id="impactTitle">一眼看懂改變</h2></div></div><div class="impact-metric"><span>下月可自由支配</span><div><strong id="disposableValue">NT$4,200</strong><small id="disposableDelta">原為 NT$18,600</small></div></div><div class="impact-metric goal-impact"><span>年底目標達成率</span><div class="goal-change"><del>100%</del><span aria-hidden="true">→</span><strong id="goalValue">76%</strong></div><div class="progress-bar"><i id="goalBar" style="width:76%"></i><span aria-hidden="true"></span></div><small id="goalCaption">預估少存 NT$36,000</small></div><div class="insight-box"><span>試算解讀</span><p id="insightText">如果現在一次付清，下個月可自由支配金額會降到約 NT$4,200，並可能短暫出現資金缺口。</p></div></section>
+        </div>
+        <footer class="results-footer"><div><span aria-hidden="true">↳</span><p><b>三種方式你都買得起，</b><br>只是對未來的影響不一樣。</p></div><p>你不是在決定買不買得起，<br>而是在選擇哪一種未來更適合你。</p></footer>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>i</span><p></p><button type="button" aria-label="關閉通知">×</button></div>
+  <dialog id="basisDialog" class="basis-dialog"><div class="dialog-heading"><div><p class="eyebrow">試算依據</p><h2>這些數字從哪裡來？</h2></div><button type="button" aria-label="關閉" data-close-dialog>×</button></div><dl><div><dt>近三個月平均支出</dt><dd>NT$32,400</dd></div><div><dt>每月固定支出</dt><dd>NT$18,200</dd></div><div><dt>目前儲蓄</dt><dd>NT$102,000</dd></div><div><dt>每月薪資</dt><dd>約 NT$52,000</dd></div></dl><p>這是依照既有資料建立的情境試算，不是對未來的保證。實際金額會隨你的消費變化。</p><button class="button button-primary button-full" type="button" data-close-dialog>我知道了</button></dialog>
+  <script src="game.js"></script>
+</body>
+</html>
